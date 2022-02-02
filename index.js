@@ -21,13 +21,13 @@ var my_database = mysql.createConnection({
 port : '3306',
 user : 'admin',
 password: 'admin123',
-database: 'test-node'
+database: 'test_node'
 });
 
 my_database.connect(function(err){
   if (err) throw err;
   console.log("connected");
-  my_database.query("SELECT * from $YOUR_TABLE", function(err,   result, fields){
+  my_database.query("SELECT * from contacts", function(err,   result, fields){
     if (err) throw err;
     data = result;
   });
