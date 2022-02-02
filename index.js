@@ -30,7 +30,7 @@ my_database.connect(function(err){
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  const msg = 'Hello Node! My Test Pipeline\n'
+  const msg = 'Hello Node! My Test Pipeline Test with Edward \n'
   res.end("<p>"+msg+"</p>"+"<p>"+JSON.stringify(data)+"</p>");
 });
 
