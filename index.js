@@ -37,7 +37,7 @@ console.log(dbPort+" "+dbHost);
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  const msg = 'Hello Node! My Test Pipeline Test with Eduardo \n'
+  const msg = 'Hello Node! My Test Pipeline Test with env file \n'
   res.end("<p>"+msg+"</p>"+"<p>"+JSON.stringify(data)+"</p>");
 });
 
