@@ -1,17 +1,24 @@
+require('dotenv').config();
+
 const http = require('http');
 const port = process.env.PORT || 3000;
 const express = require('express');
 const router = express.Router();
 const mysql = require('mysql');
 var data;
-var json;
+
+const dbHost = process.env.DB_HOST;
+const dbPort = process.env.DB_PORT;
+const dbUser = process.env.DB_USER;
+const dbPwd = process.env.DB_PWD;
+const dbDatabase = process.env.DB_DATABASE;
 
 var my_database = mysql.createConnection({
-  host: 'database-1.ceryvyudjtn7.us-east-1.rds.amazonaws.com',
-  port : '3306',
-  user : 'admin',
-  password: 'admin123',
-  database: 'test_node'
+  host: dbHost,
+  port : dbPort,
+  user : dbUser,
+  password: dbPwd,
+  database: dbDatabase
 });
 
 my_database.connect(function(err){
