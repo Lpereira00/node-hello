@@ -1,4 +1,3 @@
-// require('dotenv').config();
 
 const http = require('http');
 const port = process.env.PORT || 3000;
@@ -13,6 +12,7 @@ const dbUser = process.env.DB_USER;
 const dbPwd = process.env.DB_PWD;
 const dbDatabase = process.env.DB_DATABASE;
 
+console.log(dbPort+" "+dbHost);
 // var my_database = mysql.createConnection({
 //   host: dbHost,
 //   port : dbPort,
