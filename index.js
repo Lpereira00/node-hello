@@ -1,11 +1,11 @@
-require('dotenv').config();
+// require('dotenv').config();
 
 const http = require('http');
 const port = process.env.PORT || 3000;
 const express = require('express');
 const router = express.Router();
 const mysql = require('mysql');
-var data;
+var data = "column:row";
 
 const dbHost = process.env.DB_HOST;
 const dbPort = process.env.DB_PORT;
@@ -13,22 +13,22 @@ const dbUser = process.env.DB_USER;
 const dbPwd = process.env.DB_PWD;
 const dbDatabase = process.env.DB_DATABASE;
 
-var my_database = mysql.createConnection({
-  host: dbHost,
-  port : dbPort,
-  user : dbUser,
-  password: dbPwd,
-  database: dbDatabase
-});
+// var my_database = mysql.createConnection({
+//   host: dbHost,
+//   port : dbPort,
+//   user : dbUser,
+//   password: dbPwd,
+//   database: dbDatabase
+// });
 
-my_database.connect(function(err){
-  if (err) throw err;
-  console.log("connected");
-  my_database.query("SELECT * from contacts", function(err,   result, fields){
-    if (err) throw err;
-    data = result;
-  });
-});
+// my_database.connect(function(err){
+//   if (err) throw err;
+//   console.log("connected");
+//   my_database.query("SELECT * from contacts", function(err,   result, fields){
+//     if (err) throw err;
+//     data = result;
+//   });
+// });
 
 // router.get('/', function(req, res, next){
 //   json = res.send(JSON.stringify(data));
