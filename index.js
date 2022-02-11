@@ -12,7 +12,7 @@ const dbUser = process.env.DB_USER;
 const dbPwd = process.env.DB_PWD;
 const dbDatabase = process.env.DB_DATABASE;
 
-console.log("Test with env "+dbPort+" "+dbHost);
+console.log(`Test with env ${dbPort} and ${dbHost}`);
 // var my_database = mysql.createConnection({
 //   host: dbHost,
 //   port : dbPort,
