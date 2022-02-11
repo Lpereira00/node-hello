@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000;
 const express = require('express');
 const router = express.Router();
 const mysql = require('mysql');
-var data = "column:row";
+var data;
 
 const dbHost = process.env.DB_HOST;
 const dbPort = process.env.DB_PORT;
