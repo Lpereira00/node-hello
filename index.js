@@ -12,22 +12,22 @@ const dbUser = process.env.DB_USER;
 const dbPwd = process.env.DB_PWD;
 const dbDatabase = process.env.DB_DATABASE;
 
-var my_database = mysql.createConnection({
-  host: dbHost,
-  port : dbPort,
-  user : dbUser,
-  password: dbPwd,
-  database: dbDatabase
-});
+// var my_database = mysql.createConnection({
+//   host: dbHost,
+//   port : dbPort,
+//   user : dbUser,
+//   password: dbPwd,
+//   database: dbDatabase
+// });
 
-my_database.connect(function(err){
-  if (err) throw err;
-  console.log("connected");
-  my_database.query("SELECT * from contacts", function(err,   result, fields){
-    if (err) throw err;
-    data = result;
-  });
-});
+// my_database.connect(function(err){
+//   if (err) throw err;
+//   console.log("connected");
+//   my_database.query("SELECT * from contacts", function(err,   result, fields){
+//     if (err) throw err;
+//     data = result;
+//   });
+// });
 
 // router.get('/', function(req, res, next){
 //   json = res.send(JSON.stringify(data));
