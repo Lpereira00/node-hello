@@ -37,9 +37,9 @@ const dbDatabase = process.env.DB_DATABASE;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   const msg = 'Hello Node! My Test Pipeline Test with env file \n'
-  res.end("<p>"+msg+"</p>"+"<p>"+JSON.stringify(data)+"</p>");
+  res.end("<p>"+msg+"</p>");
 });
-
+//+"<p>"+JSON.stringify(data)+"</p>"
 server.listen(port, () => {
   console.log(`Server running on http://localhost:${port}/`);
 });
