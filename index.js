@@ -6,12 +6,12 @@ const router = express.Router();
 const mysql = require('mysql');
 var data;
 
-const dbHost = process.env.DB_HOST;
-const dbPort = process.env.DB_PORT;
-const dbUser = process.env.DB_USER;
-const dbPwd = process.env.DB_PWD;
-const dbDatabase = process.env.DB_DATABASE;
-
+// const dbHost = process.env.DB_HOST;
+// const dbPort = process.env.DB_PORT;
+// const dbUser = process.env.DB_USER;
+// const dbPwd = process.env.DB_PWD;
+// const dbDatabase = process.env.DB_DATABASE;
+const test_message = process.env.MESSAGE
 // var my_database = mysql.createConnection({
 //   host: dbHost,
 //   port : dbPort,
@@ -37,7 +37,7 @@ const dbDatabase = process.env.DB_DATABASE;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   const msg = 'Hello Node! My Test Pipeline Test with env file \n'
-  res.end("<p>"+msg+"</p>");
+  res.end("<p>"+msg+"</p>"+"<p>"+test_message+"</p>");
 });
 //+"<p>"+JSON.stringify(data)+"</p>"
 server.listen(port, () => {
