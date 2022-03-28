@@ -36,7 +36,7 @@ const test_message = process.env.MESSAGE || "testing endpoints again"
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  const msg = 'Hello Node! My Test Pipeline testing endpoints\n'
+  const msg = 'Hello Node! My Test Pipeline\n'
   res.end("<p>"+msg+"</p>"+"<p>"+test_message+"</p>");
 });
 //+"<p>"+JSON.stringify(data)+"</p>"
