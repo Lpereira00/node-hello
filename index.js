@@ -1,6 +1,6 @@
 
-const https = require('https');
-const port = process.env.PORT || 443;
+const http = require('http');
+const port = process.env.PORT || 3000;
 const express = require('express');
 const router = express.Router();
 const mysql = require('mysql');
@@ -34,7 +34,7 @@ const test_message = process.env.MESSAGE || "testing endpoints again"
 // });
 // module.exports = router;
 
-const server = https.createServer((req, res) => {
+const server = http.createServer((req, res) => {
   res.statusCode = 200;
   const msg = 'Hello Node! My Test Pipeline testing endpoints\n'
   res.end("<p>"+msg+"</p>"+"<p>"+test_message+"</p>");
