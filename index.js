@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000;
 const express = require('express');
 const router = express.Router();
 const mysql = require('mysql');
-var data;
+let data;
 
 // const dbHost = process.env.DB_HOST;
 // const dbPort = process.env.DB_PORT;
@@ -29,10 +29,10 @@ const test_message = process.env.MESSAGE || "testing endpoints again"
 //   });
 // });
 
-// router.get('/', function(req, res, next){
-//   json = res.send(JSON.stringify(data));
-// });
-// module.exports = router;
+router.get('/', function(req, res, next){
+  json = res.send(JSON.stringify(data));
+});
+module.exports = router;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
