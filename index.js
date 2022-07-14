@@ -11,7 +11,7 @@ let data;
 // const dbUser = process.env.DB_USER;
 // const dbPwd = process.env.DB_PWD;
 // const dbDatabase = process.env.DB_DATABASE;
-const test_message = process.env.MESSAGE || "testing endpoints demo"
+const test_message = process.env.MESSAGE || "testing endpoints test codepipeline"
 // var my_database = mysql.createConnection({
 //   host: dbHost,
 //   port : dbPort,
@@ -36,7 +36,7 @@ module.exports = router;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  const msg = 'Hello Node! My Test Pipeline testing endpoints\n'
+  const msg = 'Hello Node! My Test Pipeline testing endpoints codepipeline\n'
   res.end("<p>"+msg+"</p>"+"<p>"+test_message+"</p>");
 });
 //+"<p>"+JSON.stringify(data)+"</p>"
