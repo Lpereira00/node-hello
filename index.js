@@ -11,7 +11,7 @@ let data;
 // const dbUser = process.env.DB_USER;
 // const dbPwd = process.env.DB_PWD;
 // const dbDatabase = process.env.DB_DATABASE;
-const test_message = process.env.MESSAGE || "testing endpoints again"
+const test_message = process.env.MESSAGE || "testing endpoints demo"
 // var my_database = mysql.createConnection({
 //   host: dbHost,
 //   port : dbPort,
